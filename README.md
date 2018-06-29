@@ -23,13 +23,47 @@ Web application and client utilities and libraries that allows to proxify URL ca
   - some external (web) proxy add extra content to the response, so make sure to know/provide the correct response
     processing actions (cleaning).
     
-    
+### Clone, Compile and Running
+
+#### How to build it
+Firs of all, you have to get Interproxy project into your local machine.
+
+```
+cd /home/user/worspaces/ # or on windows > cd /c/user/worspaces/
+git clone git@github.com:ilucatero/interproxy.git
+cd interproxy
+```
+
+As soon as you see the pom.xml file, you can get that it is a Maven project. So to compile it just go to root directory of
+ project workspace and do
+ 
+ ```
+ mvn clean install
+ ```
+
 #### How to run the web server app :
      
 Since it is a SpringBoot application, just execute the follow line:  
 `java -jar inter-proxy-web/target/inter-proxy.war`  
 
 Any external configuration (properties and/or xml files) should placed on "/config" directory, or passed by parameter (spring.config.location) on execution.
+
+#### How to use the client dependency
+
+If you have the web server up and running and you need your applications to call the middleware proxy server. You just
+ need to add the below dependency on your *pom.xml* file of Maven project.
+ 
+**TODO**: once the Maven repository is accepted and created, put here the dependency.
+```
+<dependency>
+    <groupId>interproxy</groupId>
+    <artifactId>interproxy-client</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+In case you are not using Maven as building tool for your project, you will need to compile it, extract the *jar* file
+ and set it as an external jar (putting it manually on the */lib* directory of your application).
 
 
 ### Open Source Contribution
