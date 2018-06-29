@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Proxies>
+    <ProxyHost>
+        <hostname>80.211.154.82</hostname>
+        <port>80</port>
+        <scheme>https</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>217.61.23.234</hostname>
+        <port>3128</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>121.254.214.219</hostname>
+        <port>80</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>185.112.82.116</hostname>
+        <port>1490</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>167.99.188.36</hostname>
+        <port>3128</port>
+        <scheme>https</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>119.207.78.155</hostname>
+        <port>80</port>
+        <scheme>https</scheme>
+    </ProxyHost>
+</Proxies>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Proxies>
+    <!-- got from https://free-proxy-list.net/ -->
+    <ProxyHost>
+        <hostname>202.29.219.102</hostname>
+        <port>8080</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>96.9.69.164</hostname>
+        <port>53281</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>188.232.209.204</hostname>
+        <port>53281</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>119.207.78.155</hostname>
+        <port>80</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>91.109.154.16</hostname>
+        <port>53281</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+    <ProxyHost>
+        <hostname>140.227.25.105</hostname>
+        <port>3128</port>
+        <scheme>http</scheme>
+    </ProxyHost>
+</Proxies>

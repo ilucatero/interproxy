@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+    <title>InterProxy - Web App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="cache-control" content="no-cache; max-age=0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="resources/css/main.css">
+    <script src="resources/js/main.js"></script>
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="#home"><img id="logo" src="/resources/img/ip.png"></a>
+    <div class="search-container">
+        <form id="proxyForm" action="/proxify" method="get" target="url_iframe">
+            <div>
+            <input name="url" id="url" type="text" value="http://www.lemonde.fr/rss/une.xml" placeholder="url"/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <div id="route" >
+                <label for="externalAddressActive">Fix proxy:</label><input id="externalAddressActive" type="checkbox" />
+                <label for="hostname">Hostname:</label><input name="hostname" id="hostname" type="input" value="" disabled/>
+                <label for="port"></label> Port : <input name="port" id="port" id="port" type="input" value="" disabled/>
+                <label for="scheme">Scheme:</label> <input name="scheme" id="scheme" type="input" value="" disabled/>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="content-container">
+    <iframe name="url_iframe"  sandbox />
+</div>
+
+</body>
+</html>
