@@ -9,7 +9,7 @@ Before sending your pull requests, make sure you followed this list.
 - Read [Code of Conduct](CODE_OF_CONDUCT.md).
 - Ensure you have signed the [Contributor License Agreement (CLA)](https://cla.developers.google.com/).
 - Check if my changes are consistent with the [guidelines](CONTRIBUTING.md#general-guidelines-and-philosophy-for-contribution).
-- Changes are consistent with the [Coding Style](CONTRIBUTING.md#c-coding-style).
+- Changes are consistent with the [Coding Style](CONTRIBUTING.md#coding-style-for-languages).
 - Run & pass [Unit Tests](CONTRIBUTING.md#running-unit-tests) ! ! !.
 
 ## How to become a contributor and submit your own code
@@ -20,10 +20,13 @@ We'd love to accept your patches! Before we can take them, we have to jump a cou
 
 Please fill out either the individual or corporate Contributor License Agreement (CLA).
 
-  * If you are an individual writing original source code and you're sure you own the intellectual property, then you'll need to sign an [individual CLA](https://code.google.com/legal/individual-cla-v1.0.html).
-  * If you work for a company that wants to allow you to contribute your work, then you'll need to sign a [corporate CLA](https://code.google.com/legal/corporate-cla-v1.0.html).
+  * If you are an individual writing original source code and you're sure you own the intellectual property, then you'll
+  need to sign an [individual CLA](https://code.google.com/legal/individual-cla-v1.0.html).
+  * If you work for a company that wants to allow you to contribute your work, then you'll need to sign a
+  [corporate CLA](https://code.google.com/legal/corporate-cla-v1.0.html).
 
-Follow either of the two links above to access the appropriate CLA and instructions for how to sign and return it. Once we receive it, we'll be able to accept your pull requests.
+Follow either of the two links above to access the appropriate CLA and instructions for how to sign and return it. Once
+ we receive it, we'll be able to accept your pull requests.
 
 ***NOTE***: Only original source code from you and other people that have signed the CLA can be accepted into the main repository.
 
@@ -32,11 +35,15 @@ Follow either of the two links above to access the appropriate CLA and instructi
 If you have improvements to InterProxy, send us your pull requests! For those
 just getting started, Github has a [howto](https://help.github.com/articles/using-pull-requests/).
 
-InterProxy team members will be assigned to review your pull requests. Once the pull requests are approved and pass continuous integration checks, we will merge the pull requests.
-For some pull requests, we will apply the patch for each pull request to our internal version control system first, and export the change out as a new commit later, at which point the original pull request will be closed. The commits in the pull request will be squashed into a single commit with the pull request creator as the author. These pull requests will be labeled as pending merge internally.
+InterProxy team members will be assigned to review your pull requests. Once the pull requests are approved and pass
+ continuous integration checks, we will merge the pull requests.
+For some pull requests, we will apply the patch for each pull request to our internal version control system first, and
+ export the change out as a new commit later, at which point the original pull request will be closed. The commits in the
+ pull request will be squashed into a single commit with the pull request creator as the author. These pull requests will
+ be labeled as pending merge internally.
 
 If you want to contribute but you're not sure where to start, take a look at the
-[issues with the "contributions welcome" label](https://github.com/InterProxy/InterProxy/labels/stat%3Acontributions%20welcome).
+[issues with the "contributions welcome" label](https://github.com/ilucatero/interproxy/labels/contributions%20welcome).
 These are issues that we believe are particularly well suited for outside
 contributions, often because we probably won't get to them right now. If you
 decide to start on an issue, leave a comment so that other people know that
@@ -46,7 +53,7 @@ comment thread to coordinate.
 ### Contribution guidelines and standards
 
 Before sending your pull request for
-[review](https://github.com/InterProxy/InterProxy/pulls),
+[review](https://github.com/ilucatero/interproxy/pulls),
 make sure your changes are consistent with the guidelines and follow the
 InterProxy coding style.
 
@@ -58,7 +65,8 @@ InterProxy coding style.
 * Bug fixes also generally require unit tests, because the presence of bugs
   usually indicates insufficient test coverage.
 * Keep API compatibility in mind when you change code in core InterProxy,
-  e.g., code in [InterProxy/core](https://github.com/InterProxy/InterProxy/tree/master/InterProxy/core) and  [InterProxy/python](https://github.com/InterProxy/InterProxy/tree/master/InterProxy/python).
+  e.g., code in [InterProxy/core](https://github.com/ilucatero/interproxy/tree/master/inter-proxy-core) and 
+  [InterProxy/web](https://github.com/ilucatero/interproxy/tree/master/inter-proxy-web).
   InterProxy has reached version 1 and hence cannot make
   non-backward-compatible API changes without a major release. Reviewers of your
   pull request will comment on any API compatibility issues.
@@ -67,7 +75,7 @@ InterProxy coding style.
   contribution must be compared against the cost of maintaining the feature.
 * Full new features (e.g., a new op implementing a cutting-edge algorithm)
   typically will live in
-  [InterProxy/contrib](https://github.com/InterProxy/InterProxy/tree/master/InterProxy/contrib)
+  [InterProxy/contrib](https://github.com/ilucatero/interproxy/contrib)
   to get some airtime before decision is made regarding whether they are to be
   migrated to the core.
 
@@ -75,14 +83,13 @@ InterProxy coding style.
 
 Include a license at the top of new files.
 
-* [Java license example](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/java/src/main/java/org/InterProxy/Graph.java#L1)
-* [Python license example](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/python/ops/nn.py#L1)
-* [Bash license example](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/tools/ci_build/ci_sanity.sh#L2)
-* [HTML license example](https://github.com/InterProxy/tensorboard/blob/master/tensorboard/components/tf_backend/tf-backend.html#L2)
-* [JavaScript/TypeScript license example](https://github.com/InterProxy/tensorboard/blob/master/tensorboard/components/tf_backend/backend.ts#L1)
+* [Java license example](https://github.com/ilucatero/interproxy/blob/master/inter-proxy-core/src/main/java/io/interproxy/core/ProxyHostsManager.java)
+* [Python license example]()
+* [Bash license example]()
+* [HTML license example](https://github.com/ilucatero/interproxy/blob/master/inter-proxy-web/src/main/resources/static/pages/index.html)
+* [JavaScript/TypeScript license example]()
 
-Bazel BUILD files also need to include a license section, e.g.,
-[BUILD example](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/core/BUILD#L61).
+
 
 #### Coding style for languages
 
@@ -101,11 +108,11 @@ There are two ways to run InterProxy unit tests.
 1. Using tools and libraries installed directly on your system.
 
    Refer to the
-   [CPU-only developer Dockerfile](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/tools/docker/Dockerfile.devel) and
-   [GPU developer Dockerfile](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/tools/docker/Dockerfile.devel-gpu)
+   [Web developer Dockerfile](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/tools/docker/Dockerfile.one) and
+   [Test developer Dockerfile](https://github.com/InterProxy/InterProxy/blob/master/InterProxy/tools/docker/Dockerfile.other)
    for the required packages. Alternatively, use the said
    [Docker images](https://hub.docker.com/r/InterProxy/InterProxy/tags/), e.g.,
-   `InterProxy/InterProxy:nightly-devel` and `InterProxy/InterProxy:nightly-devel-gpu`
+   `InterProxy/InterProxy:nightly-one` and `InterProxy/InterProxy:nightly-other`
    for development to avoid installing the packages directly on your system.
 
    Once you have the packages installed, you can run a specific unit test in
