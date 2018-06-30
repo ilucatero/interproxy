@@ -83,12 +83,12 @@
                <artifactId>maven-compiler-plugin</artifactId>
                <version>3.7.0</version>
            </plugin>
-          <!-- this shouldn't worry since it uses toolchain to compile on java 1.7 >
+          <!-- this shouldn't worry since it uses toolchain to compile on java 1.7 -->
            <plugin>
                <artifactId>maven-surefire-plugin</artifactId>
-               <configuration><argLine>- -add-modules java.xml.bind</argLine></configuration>
+               <configuration><argLine>--add-modules java.xml.bind</argLine></configuration>
            </plugin>
-           -->
+           <!--  -->
        </plugins>
     </build>
 </project>

@@ -43,7 +43,7 @@
   <properties>
     <!-- system/application properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>9</java.version>
+    <java.version>10</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
@@ -95,7 +95,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>2.22.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
