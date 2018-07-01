@@ -3,7 +3,7 @@
 Web application and client utilities and libraries that allows to proxify URL calls. In other words, it is a proxy between clients & (external) proxies.
 
 ##### What it do :
- - Inter-Proxy-Web (JDK9)
+ - Inter-Proxy-Web (JDK10)
    - Contains the the REST service that will process the parametered URL call.
      Based on a configured list of IP proxys, the client use them in a round-robin way to fetch url content.
  - Inter-Proxy-Core (JDK7)
