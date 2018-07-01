@@ -65,6 +65,39 @@ If you have the web server up and running and you need your applications to call
 In case you are not using Maven as building tool for your project, you will need to compile it, extract the *jar* file
  and set it as an external jar (putting it manually on the */lib* directory of your application).
 
+### Docker containers
+
+From previous lines, you know how to compile and run the *interproxy* application war file locally. But since the world 
+  is not perfect, and is worthless most of the time to run it on the grandma laptop, we prefer use a modern aproeach : Docker.
+  
+For instance, check the cheat sheet to know the general commands you need to use on docker [here](https://docs.docker.com/get-started/part2/#recap-and-cheat-sheet-optional).
+
+Please notice that the image and other docker generated items are aimed to contain the springboot web application, which
+ will run on a linux container.
+
+#### Build the base linux image
+
+As the web application requires java 10 installed. Also, we have decided to mount the application on a ubuntu linux image.
+ And to avoid to build this image every time the application need to be build, a base image containing all configuration is created here.
+
+Anyhow, if you don't need to add any details on the Dockerfile, and hence don't need to build the image, you can freely
+ use the one we created and pushed on Docker-Hub: *ilucatero/interproxy:latest*. 
+ 
+Note: This image is already configured on the interproxy-web Dockerfile, so if you use the provided base image , you don't need to do anything here.
+
+#### Build the interproxy-web image
+The application uses the *sprotify-docker* maven plugin (than you !), so to compile you just need to run the below line :
+```
+mvn clean package docker:build
+```
+*Don't forget to do a* mvn clean install *on the application's root directory, so the interproxy-client dependency could be generated.*
+
+#### Run the image
+To run the image just do:
+```
+docker run -d -p 8080:<8080 or app port> interproxy-image
+```
+
 
 ### Open Source Contribution
 

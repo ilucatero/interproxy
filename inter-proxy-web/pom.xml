@@ -112,6 +112,33 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration><argLine>--add-modules java.xml.bind</argLine></configuration>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <imageName>interproxy-image</imageName>
+		            <dockerDirectory>docker</dockerDirectory>
+                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    <buildArgs>
+                        <JAR_FILE>${project.build.finalName}.war</JAR_FILE>
+                    </buildArgs>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.war</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <packaging>war</packaging>
